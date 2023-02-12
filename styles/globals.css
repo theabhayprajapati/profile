@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* custom class */
+@layer components {
+  .light-theme {
+    background-color: white;
+    color: black;
+  }
+  .light-theme::moz-selection {
+    background-color: white;
+    color: black;
+  }
+  .light-theme::selection {
+    background-color: white;
+    color: black;
+  }
+  .dark-theme {
+    background-color: #000000;
+    color: white;
+  }
+  .dark-theme::moz-selection {
+    background-color: #000000;
+    color: white;
+  }
+  .dark-theme::selection {
+    background-color: #000000;
+    color: white;
+  }
+  .alink {
+    padding-bottom: 5px;
+  }
+  .alink:hover {
+    border-bottom: 3px solid;
+    padding-bottom: 1px;
+    border-radius: 1px;
+    transition: border ease-in 150ms;
+  }
+}
