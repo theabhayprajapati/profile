@@ -1,7 +1,8 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import HoverLinks from '../components/hoverLinks';
 import useBrowserTheme from '../hook/useBrowserTheme';
+// @ts-ignore
+import HoverLinks from '../components/HoverLinks';
 const Home: NextPage = () => {
   const theme = useBrowserTheme();
   console.log(theme);
