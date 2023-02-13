@@ -20,11 +20,11 @@
     background-color: #000000;
     color: white;
   }
-  .dark-theme::moz-selection {
+  body::moz-selection {
     background-color: #000000;
     color: white;
   }
-  .dark-theme::selection {
+  body::selection {
     background-color: #000000;
     color: white;
   }

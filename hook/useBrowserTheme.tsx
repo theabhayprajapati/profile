@@ -1,17 +1,17 @@
-import { useEffect } from 'react';
-import useLocalStorage from './useLocalstorage';
 
+import { useEffect } from 'react';
+import useCookie from './useCookie';
 const useBrowserTheme = () => {
-    const [theme, setTheme] = useLocalStorage('theme', 'dark');
+    const { value, setValue } = useCookie<string>('theme', 'light');
     useEffect(() => {
         if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            setTheme('dark');
+            console.log('dark is the browser theme');
+            setValue('dark');
         } else {
-            setTheme('light');
+            setValue('light');
         }
     }, []);
-
-    return theme;
+    return value;
 };
 
 export default useBrowserTheme;
